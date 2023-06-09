@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&family=Raleway:wght@100&family=Roboto:wght@100;400;500;700&display=swap');
+
+:root {
+    --main-color: #00669F;
+    --alt-text-color: #F3F3F3;
+    --verdecito: #1CD1B0;
+}
+
+* {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: var(--verdecito);
+    padding: 0.5rem 1.5rem;
+}
+
+.sticky-menu {
+    background-color: var(--main-color);
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+    padding: 1.5rem;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+
+.sticky-menu h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin: 9.5rem 0;
+    text-align: center;
+    position: relative
+}
+
+.card {
+    display: flex;
+    flex-basis: 350px;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-header {
+    background-image: url(../img/849bfede3a5193c34ab8a00379e64fa2\ 1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 193px;
+    position: relative;
+}
+
+.harley {
+    background-image: url(../img/849bfede3a5193c34ab8a00379e64fa2\ 1\ \(1\).svg);
+}
+
+.superman {
+    background-image: url(../img/superman-bg.png);
+    border-radius: 20px 20px 0 0;
+}
+
+.wonder-woman {
+    background-image: url(../img/849bfede3a5193c34ab8a00379e64fa2\ 1.png);
+    border-radius: 20px 20px 0 0;
+}
+
+.card-header img {
+    position: absolute;
+    top: 1rem;
+    left: 1.3rem;
+}
+
+.card-body {
+    background-color: var(--alt-text-color);
+    height: 400px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-body img {
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -115%);
+    width: 50%;
+}
+
+.card-body p {
+    position: absolute;
+}
+
+.char-name {
+    font-size: 1.8rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.char-desc {
+    text-align: left;
+    top: 58%;
+    width: 100% - 2rem;
+    padding: 0 1rem;
+}
+
+.card-body a {
+    background-color: var(--main-color);
+    border: none;
+    bottom: 2rem;
+    color: var(--alt-text-color);
+    padding: 1rem 2.2rem;
+    position: absolute;
+    text-decoration: none;
+    transform: translate(-50%);
+}
+
+.copy {
+    align-items: center;
+    background-color: var(--main-color);
+    display: flex;
+    padding: 2rem;
+    position: relative;
+}
+
+.copy p {
+    color: var(--alt-text-color);
+    margin: 0 auto;
+}
+
+.copy img {
+    padding-right: 2rem;
+    position: absolute;
+    right: 0;
+    width: 120px;
+}
+
+.cruceta {
+    display: none;
+    position: absolute;
+    top: 49.5%;
+    z-index: 2;
+    transform: translateY(-49.5%);
+    right: 1rem;
+}
+
+.cruceta a {
+    background-color: var(--main-color);
+    border-radius: 100%;
+    color: var(--alt-text-color);
+    padding: 1rem 1.6rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cruceta a::before {
+    content: "\002B";
+}
+
+/* Media queries */
+@media screen and  (min-width: 951px) and (max-width: 1146px) {
+    .top-bar {
+        background-color: #D1891C;
+    }
+
+    .sticky-menu {
+        color: var(--alt-text-color);
+    }
+
+    .cards {
+        margin: 0;
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .copy {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .copy img {
+        position: relative;
+    }
+
+    .cruceta {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .cards {
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem auto 8rem auto;
+        gap: 60px;
+    }
+
+    .card {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .superman + div img {
+        content: url(../img/superman2.png);
+    }
+
+    .cards div.card:last-child {
+        display: none;
+    }
+
+    .cruceta {
+        display: block;
+        top: 33%;
+    }
+}
